@@ -1,99 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>piracy</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-		}
-		h1 {
-			text-align: center;
-			color: #FF0000;
-		}
-		form {
-			display: flex;
-			justify-content: center;
-			margin-top: 20px;
-			margin-bottom: 20px;
-		}
-		input[type="text"] {
-			padding: 10px;
-			border: none;
-			width: 300px;
-			font-size: 16px;
-			margin-right: 10px;
-			background-color: #000000;
-			border: 5px solid #FFFFFF;
-            border-style: double;
-			border-width: 5px;
-			color: white;
-		}
-		button[type="submit"] {
-			padding: 10px;
-			border: none;
-			background-color: #FFFFFF;
-			color: black;
-			font-size: 16px;
-			cursor: pointer;
-			border: 5px solid #FF0000;
-            border-style: double;
-			border-width: 5px;
-		}
-		.image-container {
-			display: flex;
-			justify-content: center;
-			
-		}
-		.image {
-			width: 300px;
-			height: 200px;
-			margin-right: 10px;
-			cursor: pointer;
-			border: 5px solid #FFFFFF;
-            border-style: double;
-			border-width: 5px;
-		}
-		body {
-			background-color: #000000;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-		}
-	</style>
-</head>
-<body>
-	<h1>haha piracy go brr</h1>
-	<form>
-		<input type="text" id="search" placeholder="Search...">
-		<button type="submit">Go</button>
-	</form>
-
-	<div class="image-container">
-		<a href="shows\southpark\seasons.html"><img src="images/image1.png" alt="South Park" class="image" data-search-term="South Park"></a>
-		<a href="page1.html"><img src="images/image2.png" alt="Family Guy" class="image" data-search-term="Family Guy"></a>
-
-	</div>
-	<script>
-		const form = document.querySelector('form');
-		const searchInput = document.querySelector('#search');
-		const images = document.querySelectorAll('.image');
-
-		form.addEventListener('submit', e => {
-			e.preventDefault();
-
-
-			const searchTerm = searchInput.value.toLowerCase().replace(/\s/g, '');
-
-			images.forEach(image => {
-				const term = image.dataset.searchTerm.toLowerCase().replace(/\s/g, '');
-				if (term.includes(searchTerm)) {
-					image.style.display = 'block';
-				} else {
-					image.style.display = 'none';
-				}
-			});
-		});
-
-	</script>
-</body>
+  <head>
+    <title>Login</title>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      input[type="password"] {
+        padding: 10px;
+        font-size: 16px;
+		color: red;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="return validate()" action="movies.html">
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <script>
+      function validate() {
+        var password = document.getElementById("password").value;
+        if (password == "balls420") {
+          return true;
+        } else {
+          window.location.href = "incorrect.html";
+          return false;
+        }
+      }
+    </script>
+  </body>
 </html>
