@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="video-js/video-js.min.css" rel="stylesheet">
+	<script src="video-js/video.min.js"></script>
+	<script>
+		var player = videojs('my-video');
+	</script>
+	<title>Video Player</title>
+	<style>
+		body {
+			background-color: black;
+			margin: 0;
+			padding: 0;
+			color: white;
+			margin-top: 30px;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		video {
+			width: 80%;
+			height: auto;
+			width: 50%;
+			height: auto;
+	}
+		
+		h1 {
+			color: white;
+			margin-top: 30px;
+			font-size: 30px;
+			text-align: center;
+		}
+	</style>
+	  <h1 style="font-family: Arial; color: red;">Free Movies N' Stuff</h1>
+
+</head>
+<body>
+	<div class="container">
+		<video id="my-video" class="video-js" controls preload="auto" width="800" height="600"
+  			data-setup='{"autoplay":true}'>
+  			<source src="video/s1e11.mp4" type="video/mp4">
+  			<source src="video/s1e11.webm" type="video/webm">
+  			<p class="vjs-no-js">
+    			To view this video please enable JavaScript, and consider upgrading to a
+    			web browser that supports HTML5 video
+  			</p>
+		</video>
+		<h1>Tom’s Rhinoplasty</h1>
+		<p>Wendy and Stan discuss their plans for romance. Principal Victoria comes into the classroom and announces that Mr. Garrison is going to be out and that a substitute will be taking his place. The lovely Miss Ellen speaks to Stan and he pukes all over his desk. Wendy is upset because Stan only pukes when he is in love and has Mrs. Ellen arrested for being a spy.</p>
+	</div>
+</body>
+</html>
